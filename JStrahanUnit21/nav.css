@@ -1,0 +1,48 @@
+body {margin: 10;}
+
+/*discuss the li tag for a list, margins, padding what li a is also*/
+
+/* this controls look and color of overall topnav bar*/
+ul.home {
+  list-style-type: none;
+  /*controls margin of topnav from top- change to 10*/ 
+  margin: 0;
+ /*controls padding of topnav- change to 10*/ 
+  padding: 0;
+  overflow: hidden;
+  /*controls color of topnav- change to different hex*/ 
+  background-color: #143;
+}
+
+/*change from left to right- this will control where the list of links will appear on the top nav bar*/
+
+ul.home li {float: left;}
+
+/*allows the whole list to be clickabale*/
+ul.home li a {
+/*when this block gets taken out the top bar gets squashed?*/
+  display: block;
+/*this controls the color of the text in the navbar-change to black*/  
+  color: white;
+  text-align: left;
+  /*will control the padding of list from top and from each part of list respectively- change to 1 each*/
+   padding: 14px 16px;
+  text-decoration: none;
+}
+
+/*this controls the color the list item news,contact will go to when hovered over */
+
+ul.home li a:hover:not(.active) {background-color: #111;}
+
+/*this controls the color the list item home and its background colour-there is no hover- maybe change this to hover and the others to not hover*/
+
+ul.home li a.active {background-color: #4CAF50;}
+
+/*will move about back over to the rest of the list items- change to left*/
+
+ul.home li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.home li.right, 
+  ul.home li {float: none;}
+}
